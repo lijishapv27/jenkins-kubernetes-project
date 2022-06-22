@@ -5,9 +5,9 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t node-kube-img:latest .' 
-                sh 'docker tag node-kube-img lijisha27/jenkis-k8s:latest'
-                sh 'docker tag node-kube-img lijisha27/jenkis-k8s:$BUILD_NUMBER'
+                sh 'docker build -t node-kube-img-scm:latest .' 
+                sh 'docker tag node-kube-img-scm lijisha27/jenkis-k8s:latest1.0'
+                sh 'docker tag node-kube-img-scm lijisha27/jenkis-k8s:$BUILD_NUMBER'
                
           }
         }
@@ -16,7 +16,7 @@ pipeline {
           
             steps {
         withDockerRegistry([ credentialsId: "Mydockerhub-credential", url: "" ]) {
-          sh  'docker push lijisha27/jenkis-k8s:latest'
+          sh  'docker push lijisha27/jenkis-k8s:latest1.0'
           sh  'docker push lijisha27/jenkis-k8s:$BUILD_NUMBER' 
         }
                   
