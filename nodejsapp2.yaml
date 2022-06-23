@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nodejs-app2
-        image: "lijisha27/jenkis-k8s:latest1.0"
+        image: "lijisha27/jenkis-k8s:latest2"
         ports:
           - containerPort: 3000
 ---
