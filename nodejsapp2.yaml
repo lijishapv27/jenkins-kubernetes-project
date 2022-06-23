@@ -29,7 +29,7 @@ metadata:
   namespace: default
 spec:
   selector:
-    app:nodejs-app2
+    app: nodejs-app2
   type: LoadBalancer
   ports:
   - name: http
