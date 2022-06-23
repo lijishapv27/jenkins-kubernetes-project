@@ -26,7 +26,7 @@ pipeline {
 {
     steps{
         script{
-    sh 'kubectl apply -f nodejsapp-new.yaml'
+    sh 'kubectl apply -f nodejsapp2.yaml'
         }
     }
 }
